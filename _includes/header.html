@@ -1,3 +1,4 @@
+{% assign sorted_tabs = site.tabs | sort: "order" %}
 <header class="site-header" id="site-header">
   <div class="container header-inner">
     <!-- Logo -->
@@ -12,10 +13,9 @@
     <nav class="site-nav" aria-label="Main navigation">
       <ul class="nav-list">
         <li><a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}active{% endif %}">Home</a></li>
-        <li><a href="{{ '/about/' | relative_url }}" class="nav-link {% if page.url contains '/about' %}active{% endif %}">About</a></li>
-        <li><a href="{{ '/categories/' | relative_url }}" class="nav-link {% if page.url contains '/categories' %}active{% endif %}">Categories</a></li>
-        <li><a href="{{ '/tags/' | relative_url }}" class="nav-link {% if page.url contains '/tags' %}active{% endif %}">Tags</a></li>
-        <li><a href="{{ '/archives/' | relative_url }}" class="nav-link {% if page.url contains '/archives' %}active{% endif %}">Archives</a></li>
+        {% for tab in sorted_tabs %}
+        <li><a href="{{ tab.url | relative_url }}" class="nav-link {% if page.url contains tab.url %}active{% endif %}">{{ tab.title }}</a></li>
+        {% endfor %}
       </ul>
     </nav>
 
@@ -46,10 +46,9 @@
   <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
     <ul class="mobile-nav-list">
       <li><a href="{{ '/' | relative_url }}" class="mobile-nav-link {% if page.url == '/' %}active{% endif %}">Home</a></li>
-      <li><a href="{{ '/about/' | relative_url }}" class="mobile-nav-link {% if page.url contains '/about' %}active{% endif %}">About</a></li>
-      <li><a href="{{ '/categories/' | relative_url }}" class="mobile-nav-link {% if page.url contains '/categories' %}active{% endif %}">Categories</a></li>
-      <li><a href="{{ '/tags/' | relative_url }}" class="mobile-nav-link {% if page.url contains '/tags' %}active{% endif %}">Tags</a></li>
-      <li><a href="{{ '/archives/' | relative_url }}" class="mobile-nav-link {% if page.url contains '/archives' %}active{% endif %}">Archives</a></li>
+      {% for tab in sorted_tabs %}
+      <li><a href="{{ tab.url | relative_url }}" class="mobile-nav-link {% if page.url contains tab.url %}active{% endif %}">{{ tab.title }}</a></li>
+      {% endfor %}
     </ul>
   </nav>
 </header>
