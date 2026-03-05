@@ -1,0 +1,34 @@
+---
+layout: default
+---
+<div class="taxonomy-layout">
+  <div class="page-header">
+    <h1 class="page-title">{{ page.title }}</h1>
+    <p class="page-description">{{ page.posts | size }} post{% if page.posts.size != 1 %}s{% endif %} in this category</p>
+  </div>
+
+  <div class="posts-list">
+    {% for post in page.posts %}
+    <article class="post-list-item">
+      <div class="post-list-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+      </div>
+      <div class="post-list-body">
+        <h2 class="post-list-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h2>
+        {% if post.excerpt %}
+        <p class="post-list-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+        {% endif %}
+        {% if post.tags.size > 0 %}
+        <div class="post-list-tags">
+          {% for tag in post.tags limit:3 %}
+          <a href="{{ '/tags/' | append: tag | downcase | replace: ' ', '-' | relative_url }}" class="tag-badge">#{{ tag }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</div>

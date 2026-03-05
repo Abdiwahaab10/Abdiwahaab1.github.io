@@ -3,6 +3,7 @@ title: "Top 10 Web Development Tips for Beginners"
 date: 2026-03-05 16:00:00 +0000
 categories: [Technology, Web Development]
 tags: [web-dev, html, css, javascript, tips, beginners]
+description: Ten practical tips to help you grow faster and smarter as a web developer — from fundamentals to deployment.
 image:
   path: https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800
   alt: Web Development

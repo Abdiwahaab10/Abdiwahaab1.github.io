@@ -3,6 +3,7 @@ title: "Why Every Developer Should Contribute to Open Source"
 date: 2026-03-05 18:00:00 +0000
 categories: [Technology, Open Source]
 tags: [open-source, github, community, career, programming]
+description: Open source isn't just for big names — every developer at any level can contribute and benefit enormously.
 image:
   path: https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=800
   alt: Open Source

@@ -3,14 +3,13 @@ title: Welcome to My Blog!
 date: 2026-03-05 12:00:00 +0000
 categories: [General]
 tags: [welcome, introduction]
+description: Hello and welcome — I'm Abdiwahaab, a web developer sharing my journey through tech and life.
 image:
   path: https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800
   alt: Welcome
 ---
 
-# Welcome! 👋
-
-Hello and welcome to my personal blog. My name is **Abdiwahaab**, and I'm excited to finally have a space to share my thoughts, ideas, and stories with the world.
+Hello and welcome to my personal blog! My name is **Abdiwahaab**, and I'm excited to finally have a space to share my thoughts, ideas, and stories with the world.
 
 I'm a web developer and technology enthusiast, and this blog is where I document my journey, share what I learn, and connect with people who share similar interests.
 
