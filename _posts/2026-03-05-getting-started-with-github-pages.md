@@ -3,9 +3,8 @@ title: Getting Started with GitHub Pages
 date: 2026-03-05 14:00:00 +0000
 categories: [Technology, Web]
 tags: [github-pages, jekyll, blogging]
+description: Learn how GitHub Pages works and how to write posts using Jekyll.
 ---
-
-# Getting Started with GitHub Pages
 
 If you're reading this, you're looking at a blog powered by **GitHub Pages** — a free hosting service provided by GitHub that lets you publish websites directly from a Git repository.
 
@@ -17,15 +16,15 @@ GitHub Pages is a static site hosting service that takes files straight from a r
 - **Easy to set up** — Just push to a repo and your site is live
 - **Customizable** — Use any Jekyll theme or build your own HTML/CSS
 
-## The Jekyll + Chirpy Stack
+## The Jekyll Stack
 
-This blog uses [Jekyll](https://jekyllrb.com/) — a static site generator — with the beautiful [Chirpy theme](https://github.com/cotes2020/jekyll-theme-chirpy). Together, they provide:
+This blog uses [Jekyll](https://jekyllrb.com/) — a static site generator — with a custom-built professional theme. Together, they provide:
 
 - Clean, responsive design
-- Dark/light mode
+- Dark/light mode toggle
 - Categories, tags, and archives
-- Search functionality
 - Table of contents for long posts
+- Reading progress bar
 
 ## How to Write a New Post
 

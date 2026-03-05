@@ -1,128 +1,60 @@
 # The Site Configuration
 
-# Import the theme
-theme: jekyll-theme-chirpy
-
-# The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
+# The language of the webpage
 lang: en
 
 # Change to your timezone › https://zones.arilyn.cc
 timezone: Africa/Mogadishu
 
-# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
-# ↓ --------------------------
+# jekyll-seo-tag settings
+title: Abdiwahaab's Blog
 
-title: Abdiwahaab's Blog # the main title
+tagline: Web Developer · Tech Enthusiast · Lifelong Learner
 
-tagline: Web Developer · Tech Enthusiast · Lifelong Learner # it will display as the subtitle
-
-description: >- # used by seo meta and the atom feed
+description: >-
   Personal blog by Abdiwahaab — sharing thoughts, ideas, tutorials, and stories about web development, technology, and everyday life.
 
-# Fill in the protocol & hostname for your site.
 url: "https://abdiwahaab10.github.io"
 
 github:
-  username: Abdiwahaab10 # change to your GitHub username
-
-twitter:
-  username: # change to your Twitter username
+  username: Abdiwahaab10
 
 social:
   name: Abdiwahaab
   email: 
   links:
-    - https://github.com/Abdiwahaab10 # GitHub homepage
+    - https://github.com/Abdiwahaab10
 
-# Site Verification Settings
-webmaster_verifications:
-  google: 
-  bing: 
-  alexa: 
-  yandex: 
-  baidu: 
-  facebook: 
-
-# ↑ --------------------------
-# The end of `jekyll-seo-tag` settings
-
-# Web Analytics Settings
-analytics:
-  google:
-    id: 
-  goatcounter:
-    id: 
-  umami:
-    id: 
-    domain: 
-  matomo:
-    id: 
-    domain: 
-  cloudflare:
-    id: 
-  fathom:
-    id: 
-
-# Page views settings
-pageviews:
-  provider: 
-
-# Prefer color scheme setting.
-theme_mode: 
-
-# The CDN endpoint for media resources.
-cdn:
-
-# the avatar on sidebar, support local or CORS resources
+# Avatar for author bio
 avatar: https://github.com/Abdiwahaab10.png
 
-# The URL of the site-wide social preview image used in SEO `og:image` meta tag.
-social_preview_image: 
+# LinkedIn profile URL (used in nav/footer)
+linkedin_url: https://www.linkedin.com/in/abdiwahaab10
 
-# boolean type, the global switch for TOC in posts.
+# Enable Table of Contents in posts by default
 toc: true
 
-comments:
-  provider: 
-  disqus:
-    shortname: 
-  utterances:
-    repo: 
-    issue_term: 
-  giscus:
-    repo: 
-    repo_id:
-    category:
-    category_id:
-    mapping: 
-    strict: 
-    input_position: 
-    lang: 
-    reactions_enabled: 
+# Pagination
+paginate: 6
+paginate_path: "/page/:num/"
 
-# Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
-assets:
-  self_host:
-    enabled: 
-    env: 
-
-pwa:
-  enabled: true # The option for PWA feature (installable)
-  cache:
-    enabled: true 
-    deny_paths:
-
-paginate: 10
-
-# The base URL of your site (Halkan ayaan ku saxay linkigaaga!)
+# The base URL of your site
 baseurl: "/Abdiwahaab1.github.io"
+
+# Plugins
+plugins:
+  - jekyll-archives
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
 
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:
   footnote_backlink: "&#8617;&#xfe0e;"
   syntax_highlighter: rouge
-  syntax_highlighter_opts: 
+  syntax_highlighter_opts:
     css_class: highlight
     span:
       line_numbers: false
@@ -137,20 +69,19 @@ collections:
 
 defaults:
   - scope:
-      path: "" 
+      path: ""
       type: posts
     values:
       layout: post
-      comments: true 
-      toc: true 
+      toc: true
       permalink: /posts/:title/
   - scope:
       path: _drafts
     values:
-      comments: false
+      layout: post
   - scope:
       path: ""
-      type: tabs 
+      type: tabs
     values:
       layout: page
       permalink: /:title/
@@ -174,7 +105,6 @@ exclude:
   - tools
   - README.md
   - LICENSE
-  - purgecss.js
   - "*.config.js"
   - "package*.json"
 

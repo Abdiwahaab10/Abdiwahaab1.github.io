@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<div class="archive-layout">
+  <div class="page-header">
+    <h1 class="page-title">Archives</h1>
+    <p class="page-description">{{ site.posts | size }} posts total</p>
+  </div>
+
+  <div class="archive-list">
+    {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+    {% for year_group in posts_by_year %}
+    <div class="archive-year-group">
+      <h2 class="archive-year">{{ year_group.name }}</h2>
+      <ul class="archive-posts">
+        {% for post in year_group.items %}
+        <li class="archive-post-item">
+          <time class="archive-date">{{ post.date | date: "%b %d" }}</time>
+          <a href="{{ post.url | relative_url }}" class="archive-post-title">{{ post.title }}</a>
+          {% if post.categories.size > 0 %}
+          <span class="archive-categories">
+            {% for cat in post.categories limit:2 %}
+            <a href="{{ '/categories/' | append: cat | downcase | replace: ' ', '-' | relative_url }}" class="category-badge-sm">{{ cat }}</a>
+            {% endfor %}
+          </span>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</div>

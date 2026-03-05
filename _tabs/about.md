@@ -1,10 +1,8 @@
 ---
-# the default layout is 'page'
-icon: fas fa-info-circle
+layout: page
+title: About
 order: 4
 ---
-
-# About Me
 
 Hi there! I'm **Abdiwahaab**, a passionate web developer and technology enthusiast based in Somalia. Welcome to my personal blog! 👋
 
@@ -45,6 +43,6 @@ I love building things for the web, exploring new technologies, and sharing what
 Feel free to explore the blog and reach out if something resonates with you. I'd love to hear from you!
 
 - 🐙 **GitHub:** [github.com/Abdiwahaab10](https://github.com/Abdiwahaab10)
-- 📧 **Email:** Feel free to use the contact icon in the sidebar
+- 💼 **LinkedIn:** [linkedin.com/in/abdiwahaab10](https://www.linkedin.com/in/abdiwahaab10)
 
 > *"The best way to learn is to build, break, and rebuild."*

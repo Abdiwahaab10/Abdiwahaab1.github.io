@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<div class="taxonomy-layout">
+  <div class="page-header">
+    <h1 class="page-title">Tags</h1>
+    <p class="page-description">Browse posts by tag</p>
+  </div>
+
+  <div class="tags-cloud">
+    {% assign tags = site.tags | sort %}
+    {% for tag in tags %}
+    {% assign tag_name = tag[0] %}
+    {% assign tag_posts = tag[1] %}
+    <a href="{{ '/tags/' | append: tag_name | downcase | replace: ' ', '-' | relative_url }}" class="tag-cloud-item" style="--size: {{ tag_posts.size }}">
+      #{{ tag_name }}
+      <span class="tag-count">{{ tag_posts | size }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</div>

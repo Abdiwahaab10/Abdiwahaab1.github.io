@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<div class="taxonomy-layout">
+  <div class="page-header">
+    <h1 class="page-title">Categories</h1>
+    <p class="page-description">Browse posts by category</p>
+  </div>
+
+  <div class="taxonomy-grid">
+    {% assign categories = site.categories | sort %}
+    {% for category in categories %}
+    {% assign cat_name = category[0] %}
+    {% assign cat_posts = category[1] %}
+    <a href="{{ '/categories/' | append: cat_name | downcase | replace: ' ', '-' | relative_url }}" class="taxonomy-card">
+      <span class="taxonomy-name">{{ cat_name }}</span>
+      <span class="taxonomy-count">{{ cat_posts | size }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</div>
